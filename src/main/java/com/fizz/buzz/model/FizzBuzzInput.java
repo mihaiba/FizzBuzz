@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.validation.constraints.Min;
+
 @ToString
 @EqualsAndHashCode
 @Getter
@@ -17,6 +19,8 @@ import lombok.ToString;
 @Builder
 
 public class FizzBuzzInput {
+    @Min(value = 1, message = "Start cannot be less than 1")
     private int startInclusive;
+    @Min(value = 1, message = "End cannot be less than 1")
     private int endInclusive;
 }
