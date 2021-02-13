@@ -11,11 +11,11 @@ public class FizzBuzz {
         if (input % 3 == 0) {
             collector = FIZZ;
         }
-        if (String.valueOf(input).contains(THREE)) {
-            collector = ALFRESCO;
-        }
         if (input % 5 == 0) {
             collector += BUZZ;
+        }
+        if (String.valueOf(input).contains(THREE)) {
+            collector = ALFRESCO;
         }
         return collector.isEmpty() ? String.valueOf(input) : collector;
     }

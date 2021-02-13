@@ -41,7 +41,13 @@ public class FizzBuzzReporterTest {
                                 "fizzbuzz", 1L,
                                 "fizz", 4L,
                                 "buzz", 3L,
-                                "an integer", 10L))
+                                "an integer", 10L)),
+                Arguments.of(IntStream.rangeClosed(1, 45).boxed().collect(toList()),
+                        ImmutableMap.of("alfresco", 14L,
+                                "fizzbuzz", 2L,
+                                "fizz", 8L,
+                                "buzz", 5L,
+                                "an integer", 16L))
         );
     }
 }
