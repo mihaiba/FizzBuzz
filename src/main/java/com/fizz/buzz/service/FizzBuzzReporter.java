@@ -1,6 +1,8 @@
 package com.fizz.buzz.service;
 
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
@@ -8,7 +10,8 @@ import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.counting;
 
-@AllArgsConstructor
+@AllArgsConstructor(onConstructor = @__(@Autowired))
+@Service
 public class FizzBuzzReporter {
     private static final String AN_INTEGER_KEY = "an integer";
 

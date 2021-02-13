@@ -1,5 +1,8 @@
 package com.fizz.buzz.service;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class FizzBuzz {
     private static final String FIZZ = "fizz";
     private static final String BUZZ = "buzz";
