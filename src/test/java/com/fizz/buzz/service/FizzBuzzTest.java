@@ -1,5 +1,6 @@
-package com.fizz.buzz;
+package com.fizz.buzz.service;
 
+import com.fizz.buzz.service.FizzBuzz;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;

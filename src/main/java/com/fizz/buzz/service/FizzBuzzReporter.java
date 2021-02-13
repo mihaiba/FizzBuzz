@@ -1,4 +1,4 @@
-package com.fizz.buzz;
+package com.fizz.buzz.service;
 
 import lombok.AllArgsConstructor;
 

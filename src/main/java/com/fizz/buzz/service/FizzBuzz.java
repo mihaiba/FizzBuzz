@@ -1,4 +1,4 @@
-package com.fizz.buzz;
+package com.fizz.buzz.service;
 
 public class FizzBuzz {
     private static final String FIZZ = "fizz";

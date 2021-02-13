@@ -1,5 +1,7 @@
-package com.fizz.buzz;
+package com.fizz.buzz.service;
 
+import com.fizz.buzz.service.FizzBuzz;
+import com.fizz.buzz.service.FizzBuzzReporter;
 import com.google.common.collect.ImmutableMap;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;

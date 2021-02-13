@@ -1,5 +1,8 @@
 package com.fizz.buzz;
 
+import com.fizz.buzz.service.FizzBuzz;
+import com.fizz.buzz.service.FizzBuzzReporter;
+
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
