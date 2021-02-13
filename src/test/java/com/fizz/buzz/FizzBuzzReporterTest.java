@@ -1,6 +1,5 @@
 package com.fizz.buzz;
 
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -9,8 +8,10 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.List;
 import java.util.Map;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+import static java.util.stream.Collectors.toList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FizzBuzzReporterTest {
@@ -27,12 +28,17 @@ public class FizzBuzzReporterTest {
     @MethodSource("generateTestInput")
     public void test(List<Integer> input, Map<String, Long> expected) {
         assertEquals(expected, sut.generateReport(input));
-
     }
 
     private static Stream<Arguments> generateTestInput() {
         return Stream.of(
-                Arguments.of(ImmutableList.of(), ImmutableMap.of())
+                Arguments.of(IntStream.empty().boxed().collect(toList()), ImmutableMap.of()),
+                Arguments.of(IntStream.rangeClosed(1, 20).boxed().collect(toList()),
+                        ImmutableMap.of("alfresco", 2,
+                                "fizzbuzz", 1,
+                                "fizz", 4,
+                                "buzz", 3,
+                                "an integer", 10))
         );
     }
 }
