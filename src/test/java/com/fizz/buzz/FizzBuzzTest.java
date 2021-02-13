@@ -1,5 +1,6 @@
 package com.fizz.buzz;
 
+import com.sun.org.apache.xpath.internal.Arg;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -27,8 +28,13 @@ public class FizzBuzzTest {
     private static Stream<Arguments> generateTestInput() {
         return Stream.of(
                 Arguments.of(1, "1"),
-                Arguments.of(3, "fizz"),
+                Arguments.of(3, "alfresco"),
                 Arguments.of(5, "buzz"),
+                Arguments.of(6, "fizz"),
+                Arguments.of(8,"8"),
+                Arguments.of(9, "fizz"),
+                Arguments.of(10, "buzz"),
+                Arguments.of(13, "alfresco"),
                 Arguments.of(15, "fizzbuzz")
         );
     }
