@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.List;
+
 @ToString
 @EqualsAndHashCode
 @Getter
@@ -15,8 +17,6 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-
-public class FizzBuzzInput {
-    private int startInclusive;
-    private int endInclusive;
+public class FizzBuzzOutput {
+    private List<String> result;
 }
