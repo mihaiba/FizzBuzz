@@ -14,5 +14,4 @@ in jib configuration or use `docker push`
 1. `curl -H "Content-Type: application/json" POST -d '{"startInclusive":1, "endInclusive": 20}' http://localhost/report | jq`
 
 ### UI
-1. `npm install -g @angular/cli@1.7.4`
-1. `ng new fizzbuzz` - generate the angular client
+1. TBD
