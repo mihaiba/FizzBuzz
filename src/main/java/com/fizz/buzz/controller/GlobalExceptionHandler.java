@@ -1,4 +1,4 @@
-package com.fizz.buzz;
+package com.fizz.buzz.controller;
 
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpHeaders;
