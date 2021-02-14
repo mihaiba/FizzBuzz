@@ -20,6 +20,7 @@
         <surfire.version>3.0.0-M5</surfire.version>
         <google.guava.version>30.1-jre</google.guava.version>
         <lombok.version>1.18.18</lombok.version>
+        <docker.registry>fizzbuzz.io</docker.registry>
     </properties>
 
     <dependencies>
@@ -85,6 +86,34 @@
                         <enabled>true</enabled>
                     </layers>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>${jib.version}</version>
+                <configuration>
+                    <from>
+                        <image>openjdk:alpine</image>
+                    </from>
+                    <container>
+                        <ports>
+                            <port>8080</port>
+                        </ports>
+                    </container>
+                    <to>
+                        <image>${docker.registry}/${project.name}/${image.name}</image>
+                    </to>
+                    <allowInsecureRegistries>true</allowInsecureRegistries>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>build-image-and-tag-image</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>dockerBuild</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
